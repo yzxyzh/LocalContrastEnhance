@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B98D36B19B0910B0047F2FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B98D36A19B0910B0047F2FE /* main.cpp */; };
-		0B98D36D19B0910B0047F2FE /* LocalContrastEnhance.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B98D36C19B0910B0047F2FE /* LocalContrastEnhance.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				0B98D36D19B0910B0047F2FE /* LocalContrastEnhance.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -27,7 +25,6 @@
 /* Begin PBXFileReference section */
 		0B98D36719B0910B0047F2FE /* LocalContrastEnhance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LocalContrastEnhance; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B98D36A19B0910B0047F2FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		0B98D36C19B0910B0047F2FE /* LocalContrastEnhance.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LocalContrastEnhance.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				0B98D36A19B0910B0047F2FE /* main.cpp */,
-				0B98D36C19B0910B0047F2FE /* LocalContrastEnhance.1 */,
 			);
 			path = LocalContrastEnhance;
 			sourceTree = "<group>";
@@ -195,6 +191,17 @@
 		0B98D37119B0910B0047F2FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_core",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +209,17 @@
 		0B98D37219B0910B0047F2FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_core",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
